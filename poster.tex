@@ -11,7 +11,7 @@
 \usepackage{lmodern}
 \usepackage[size=custom,width=120,height=72,scale=1.0]{beamerposter}
 \usetheme{gemini}
-\usecolortheme{gemini}
+\usecolortheme{btu}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{tikz}
@@ -65,6 +65,13 @@
 % ====================
 
 \begin{document}
+\addtobeamertemplate{headline}{}
+{
+    \begin{tikzpicture}[remember picture,overlay]
+      \node [anchor=north east, inner sep=3cm] at ([xshift=0.0cm,yshift=4.5cm]current page.north east)
+      {\includegraphics[height=12.0cm]{logos/BTULogoStandardversionenglischWEISS.png}}; 
+    \end{tikzpicture}
+}
 
 \begin{frame}[t]
 \begin{columns}[t]

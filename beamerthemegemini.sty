@@ -129,15 +129,15 @@
       \begin{column}{\dimexpr\paperwidth-\maxlogowidth-\maxlogowidth}
         \usebeamerfont{headline}
         \vskip3ex
-        \centering
+        %\centering
         \ifx \inserttitle \empty \else
-        {\usebeamerfont{headline title}\usebeamercolor[fg]{headline title}\inserttitle\\[0.5ex]}
+        {\hspace{10ex}\usebeamerfont{headline title}\usebeamercolor[fg]{headline title}\inserttitle\\[0.5ex]}
         \fi
         \ifx \beamer@shortauthor \empty \else
-        {\usebeamerfont{headline author}\usebeamercolor[fg]{headline author}\insertauthor\\[1ex]}
+        {\hspace{10ex}\usebeamerfont{headline author}\usebeamercolor[fg]{headline author}\insertauthor\\[1ex]}
         \fi
         \ifx \insertinstitute \empty \else
-        {\usebeamerfont{headline institute}\usebeamercolor[fg]{headline institute}\insertinstitute\\[1ex]}
+        {\hspace{10ex}\usebeamerfont{headline institute}\usebeamercolor[fg]{headline institute}\insertinstitute\\[1ex]}
         \fi
       \end{column}
       \begin{column}{\maxlogowidth}
