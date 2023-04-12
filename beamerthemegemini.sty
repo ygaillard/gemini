@@ -116,17 +116,17 @@
 {
   \begin{beamercolorbox}{headline}
     \begin{columns}
-      \begin{column}{\maxlogowidth}
-        \vskip5ex
-        \ifdefined\insertlogoleft
-        \vspace*{\fill}
-        \hspace{10ex}
-        \raggedright
-        \insertlogoleft
-        \vspace*{\fill}
-        \else\fi
-      \end{column}
-      \begin{column}{\dimexpr\paperwidth-\maxlogowidth-\maxlogowidth}
+%      \begin{column}{\maxlogowidth}
+%        \vskip5ex
+%        \ifdefined\insertlogoleft
+%        \vspace*{\fill}
+%        \hspace{10ex}
+%        \raggedright
+%        \insertlogoleft
+%        \vspace*{\fill}
+%        \else\fi
+%      \end{column}
+      \begin{column}{\dimexpr\paperwidth-\maxlogowidth}
         \usebeamerfont{headline}
         \vskip3ex
         %\centering
@@ -163,9 +163,12 @@
 {
   \begin{beamercolorbox}[colsep*=0ex,dp=2ex,center]{block title}
     \vskip0pt
-    \usebeamerfont{block title}\insertblocktitle
+    \if\insertblocktitle\empty
+    \else
+	\usebeamerfont{block title}\insertblocktitle
     \vskip-1.25ex
-    \begin{beamercolorbox}[colsep=0.025ex]{block separator}\end{beamercolorbox}
+    \begin{beamercolorbox}[colsep=0.025ex]{block separator}\end{beamercolorbox}    
+    \fi
   \end{beamercolorbox}
   {\parskip0pt\par}
   \usebeamerfont{block body}
@@ -181,6 +184,7 @@
   \vskip0pt
   \vspace*{2ex}
 }
+
 
 % Alert Block
 \setbeamertemplate{block alerted begin}
@@ -208,6 +212,7 @@
   \vskip0pt
   \vspace*{2ex}
 }
+
 
 % Example Block
 \setbeamertemplate{block example begin}
