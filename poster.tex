@@ -57,21 +57,13 @@
 % ====================
 
 % use this to include logos on the left and/or right side of the header:
-	\logoright{\includegraphics[height=6.0cm,trim={0 25 0 25},clip]{logos/BTULogoStandardversionenglischWEISS.png}}
+	\logoright{\includegraphics[height=20ex,trim={0 25 0 25},clip]{logos/BTULogoStandardversionenglischWEISS.png}}
 
 % ====================
 % Body
 % ====================
 
 \begin{document}
-\addtobeamertemplate{headline}{}
-{
-    \begin{tikzpicture}[remember picture,overlay]
-      \node [anchor=north east, inner sep=3cm] at ([xshift=0.0cm,yshift=4.5cm]current page.north east)
-      {\includegraphics[height=12.0cm]{logos/BTULogoStandardversionenglischWEISS.png}}; 
-    \end{tikzpicture}
-}
-
 \begin{frame}[t]
 \begin{columns}[t]
 \separatorcolumn
